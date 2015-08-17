@@ -49,7 +49,7 @@ function er_add_settings_link($links, $file) {
 add_filter('plugin_action_links', 'er_add_settings_link', 10, 2 );
 
 add_filter('admin_footer_text', 'left_admin_footer_text_output'); //left side
-function left_admin_footer_text_output($er_left) {
+function left_admin_footer_text_output() {
     /*Get all options from db */
     $er_options = get_option('plugin_erident_settings');
     return stripslashes($er_options['dashboard_data_left']);
