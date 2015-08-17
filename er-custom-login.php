@@ -56,11 +56,11 @@ function left_admin_footer_text_output($er_left) {
 }
 
 /* Dashboard Footer customisazion. Empty field means it will show default value */
-$opt = right_admin_footer_text_output($er_right);
+$opt = right_admin_footer_text_output();
 if ( !empty($opt)) {
 	add_filter('update_footer', 'right_admin_footer_text_output', 11); //right side
 }
-function right_admin_footer_text_output($er_right) {
+function right_admin_footer_text_output() {
     /*Get all options from db */
     $er_options = get_option('plugin_erident_settings');
     return stripslashes($er_options['dashboard_data_right']);
