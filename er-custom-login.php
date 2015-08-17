@@ -60,7 +60,7 @@ $opt = right_admin_footer_text_output($er_right);
 if ( !empty($opt)) {
 	add_filter('update_footer', 'right_admin_footer_text_output', 11); //right side
 }
-function right_admin_footer_text_output($er_right) {
+function right_admin_footer_text_output(false) {
     /*Get all options from db */
     $er_options = get_option('plugin_erident_settings');
     return stripslashes($er_options['dashboard_data_right']);
